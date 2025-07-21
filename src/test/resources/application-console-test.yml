@@ -1,0 +1,7 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+synthetic:
+  audit:
+    enabled: true
+    mode: console

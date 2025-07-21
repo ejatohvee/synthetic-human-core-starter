@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: synthetic-core-starter
+
+  # Kafka???????, ???????????? ??? ??????
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      acks: all
+      retries: 2
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+# ?????????? ????????? ? ??????????? Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  metrics:
+    enable:
+      all: true
+
+# ????????? ????????
+synthetic:
+  core:
+    thread-pool:
+      size: 8
+      maxsize: 20
+    queue:
+      capacity: 200
+
+  audit:
+    enabled: true
+    mode: kafka
+    kafka-topic: synthetic-audit
