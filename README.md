@@ -8,7 +8,7 @@ Add the dependency to your **application**’s `pom.xml` (or `build.gradle`):
 
 ```xml
 <dependency>
-  <groupId>com.weyland</groupId>
+  <groupId>com.ejatohvee</groupId>
   <artifactId>synthetic-core-starter</artifactId>
   <version>1.0.0</version>
 </dependency>
